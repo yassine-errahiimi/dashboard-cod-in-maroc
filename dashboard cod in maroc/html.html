@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2 style="color: #fcfffe; padding-left: 25px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">COD IN MAROC </h2>
+        <ul>
+            <li onclick="showSection('home')"><i class="fas fa-home"></i><span>Home</span></li>
+            <li onclick="showSection('list-product')"><i class="fas fa-box"></i><span>List Products</span></li>
+            <li onclick="showSection('confirmation')"><i class="fas fa-check-circle"></i><span>Confirmation</span></li>
+            <li onclick="showSection('my-product')" ><i class="fas fa-shopping-cart"></i><span>My Product</span></li>
+            <li onclick="showSection('prix-vendu')"><i class="fas fa-check-double"></i><span>Prix De Vente</span></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div id="home" class="section active">
+            <h2><i class="fas fa-home"></i> Welcome to the Admin Dashboard</h2>
+            <!-- Home Stats -->
+            <div class="home-stats container">
+                <!-- Revenue Card -->
+                <div class="home-card revenue">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>135900 MAD</h3>
+                    <p>Revenue</p>
+                </div>
+                <!-- Leads Card -->
+                <div class="home-card leads">
+                    <i class="fas fa-user-plus"></i>
+                    <h3 id="leads-count">0</h3>
+                    <p>Leads</p>
+                </div>
+                <!-- Pending Card -->
+                <div class="home-card pending">
+                    <i class="fas fa-hourglass-half"></i>
+                    <h3>0</h3>
+                    <p>Pending</p>
+                </div>
+                <!-- No Reply Card -->
+                <div class="home-card no-reply">
+                    <i class="fas fa-comment-slash"></i>
+                    <h3>0</h3>
+                    <p>No Reply</p>
+                </div>
+                <!-- Canceled Card -->
+                <div class="home-card canceled">
+                    <i class="fas fa-times-circle"></i>
+                    <h3>0</h3>
+                    <p>Canceled</p>
+                </div>
+                <!-- Confirmed Card -->
+                <div class="home-card confirmed">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>0</h3>
+                    <p>Confirmed</p>
+                </div>
+                <!-- Shipped Card -->
+                <div class="home-card shipped">
+                    <i class="fas fa-truck"></i>
+                    <h3>0</h3>
+                    <p>Shipped</p>
+                </div>
+                <!-- Delivered Card -->
+                <div class="home-card delivered">
+                    <i class="fas fa-check-double"></i>
+                    <h3>0</h3>
+                    <p>Delivered</p>
+                </div>
+                <!-- Returned Card -->
+                <div class="home-card returned">
+                    <i class="fas fa-undo"></i>
+                    <h3>0</h3>
+                    <p>Returned</p>
+                </div>
+            </div>
+
+            <!-- Lead Table (Confirmed Leads) -->
+        <div class="container">
+            <h3>Confirmation</h3>
+            <table class="lead-table">
+                <thead>
+                    <tr>
+                        <th>Client Name</th>
+                        <th>Phone Number</th>
+                        <th>City</th>
+                        <th>Product</th>
+                        <th>Etat</th>
+                        
+                    </tr>
+            <div>
+                </thead>
+                <tbody id="lead-table-body">
+                
+                    <!-- Example Data -->
+                    <tr>
+                        <td>asma</td>
+                        <td>+212 600000000</td>
+                        <td>Casablanca</td>
+                        <td>Product 1</td>
+                        <td style="color: #27ae60;">confirmed</td>
+                    </tr>
+                    <tr>
+                        <td>yassin</td>
+                        <td>+212 601234567</td>
+                        <td>Rabat</td>
+                        <td>Product 2</td>
+                        <td style="color: #e74c3c ;">Annulé</td>
+                    </tr>
+                    <tr>
+                        <td>yassin</td>
+                        <td>+212 601234567</td>
+                        <td>Rabat</td>
+                        <td>Product 2</td>
+                        <td style="color: #4a67fb ;">Reporté</td>
+                    </tr>
+            
+                </tbody>
+            
+            </table>
+        </div>
+        </div>
+         <div id="list-product" class="section container">
+            <h2><i class="fas fa-box"></i> List of Products</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div class="product-card" id="product1">
+                            <img src="beaf27ad-91b9-3d58-b4ca-8d7b985ae134.jpeg" alt="Product Image" >
+                            <h3>Product Name</h3>
+                            <p>Price: 100 MAD</p>
+                            <p>Commission: 10 MAD</p>
+                            <button class="add-button" onclick="addProduct('product1')"><i class="fas fa-cart-plus"></i> Add Product</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="product-card" id="product2">
+                            <img src="2eeaff62-1a6f-3c47-9b26-08ff19cfe5c5.jpeg" alt="Product Image">
+                            <h3>Product Name</h3>
+                            <p>Price: 150 MAD</p>
+                            <p>Commission: 15 MAD</p>
+                            <button class="add-button" onclick="addProduct('product2')"><i class="fas fa-cart-plus"></i> Add Product</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="product-card" id="product1">
+                            <img src="1.jpeg" alt="Product Image" >
+                            <h3>Product Name</h3>
+                            <p>Price: 100 MAD</p>
+                            <p>Commission: 10 MAD</p>
+                            <button class="add-button" onclick="addProduct('product1')"><i class="fas fa-cart-plus"></i> Add Product</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="product-card" id="product2">
+                            <img src="2.jpeg" alt="Product Image">
+                            <h3>Product Name</h3>
+                            <p>Price: 150 MAD</p>
+                            <p>Commission: 15 MAD</p>
+                            <button class="add-button" onclick="addProduct('product2')"><i class="fas fa-cart-plus"></i> Add Product</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="product-card" id="product1">
+                            <img src="3.jpeg" alt="Product Image" >
+                            <h3>Product Name</h3>
+                            <p>Price: 100 MAD</p>
+                            <p>Commission: 10 MAD</p>
+                            <button class="add-button" onclick="addProduct('product1')"><i class="fas fa-cart-plus"></i> Add Product</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="product-card" id="product2">
+                            <img src="5.jpg" alt="Product Image">
+                            <h3>Product Name</h3>
+                            <p>Price: 150 MAD</p>
+                            <p>Commission: 15 MAD</p>
+                            <button class="add-button" onclick="addProduct('product2')"><i class="fas fa-cart-plus"></i> Add Product</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="product-card" id="product1">
+                            <img src="9.jpg" alt="Product Image" >
+                            <h3>Product Name</h3>
+                            <p>Price: 100 MAD</p>
+                            <p>Commission: 10 MAD</p>
+                            <button class="add-button" onclick="addProduct('product1')"><i class="fas fa-cart-plus"></i> Add Product</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="product-card" id="product2">
+                            <img src="8cbd86c3-e88d-3d71-ae5a-5a0f468e8341.jpeg" alt="Product Image">
+                            <h3>Product Name</h3>
+                            <p>Price: 150 MAD</p>
+                            <p>Commission: 15 MAD</p>
+                            <button class="add-button" onclick="addProduct('product2')"><i class="fas fa-cart-plus"></i> Add Product</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="product-card" id="product1">
+                            <img src="9.jpg" alt="Product Image" >
+                            <h3>Product Name</h3>
+                            <p>Price: 100 MAD</p>
+                            <p>Commission: 10 MAD</p>
+                            <button class="add-button" onclick="addProduct('product1')"><i class="fas fa-cart-plus"></i> Add Product</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="product-card" id="product2">
+                            <img src="2.jpeg" alt="Product Image">
+                            <h3>Product Name</h3>
+                            <p>Price: 150 MAD</p>
+                            <p>Commission: 15 MAD</p>
+                            <button class="add-button" onclick="addProduct('product2')"><i class="fas fa-cart-plus"></i> Add Product</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="product-card" id="product1">
+                            <img src="4d3ced07-8fa6-312e-b803-0dd826514459.jpg" alt="Product Image" >
+                            <h3>Product Name</h3>
+                            <p>Price: 100 MAD</p>
+                            <p>Commission: 10 MAD</p>
+                            <button class="add-button" onclick="addProduct('product1')"><i class="fas fa-cart-plus"></i> Add Product</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="product-card" id="product2">
+                            <img src="1.jpeg" alt="Product Image">
+                            <h3>Product Name</h3>
+                            <p>Price: 150 MAD</p>
+                            <p>Commission: 15 MAD</p>
+                            <button class="add-button" onclick="addProduct('product2')"><i class="fas fa-cart-plus"></i> Add Product</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>  
+        <div id="confirmation" class="section">
+            <h2><i class="fas fa-check-circle"></i> Confirmation</h2>
+            <div class="confirmation-form">
+                <div class="form-group">
+                    <label for="client-name">Client Name</label>
+                    <input type="text" id="client-name" placeholder="Enter client name">
+                </div>
+                <div class="form-group">
+                    <label for="client-phone">Client Phone</label>
+                    <input type="tel" id="client-phone" placeholder="Enter phone number">
+                </div>
+                <div class="form-group">
+                    <label for="client-city">City</label>
+                    <input type="text" id="client-city" placeholder="Enter city">
+                </div>
+                <div class="form-group">
+                    <label for="product-select">Select Product</label>
+                    <select id="product-select">
+                        <option value="product1">Product 1</option>
+                        <option value="product2">Product 2</option>
+                    </select>
+                    <div class="form-group">
+                        <label>Prix</label>
+                        <input type="tel" id="client-phone" placeholder="Enter prix ">
+                    </div>
+                </div>
+                <button class="next-button" onclick="addLead()">Next</button>
+            </div>
+        </div>
+
+        <div id="my-product" class="section">
+            <h2><i class="fas fa-shopping-cart"></i> My Products</h2>
+            <div id="my-products-container">
+                <p>No products added yet.</p>
+            </div>
+        </div>
+        <div id="prix-vendu" class="section">
+            <h2><i class="fa-dollar-sign"></i>Prix De Vente</h2>
+            <body>
+                <div class="container">
+                    <h2>Calculateur de Prix</h2>
+                    <table class="lead-table">
+                        <thead>
+                            <tr>
+                                <th>Moi-même</th>
+                                <th>Prix D'Achat</th>
+                                <th>Cost Per Lead</th>
+                                <th>Confirmation Rate</th>
+                                <th>Cost per Confirmed</th>
+                                <th>Delivery Rate</th>
+                                <th>Cost per Delivered</th>
+                                <th>Extra + Emballage + Confirmation</th>
+                                <th>Shipping</th>
+                                <th>Margin</th>
+                                <th>Prix de Vente</th>
+                            </tr>
+                        </thead>
+                        <tbody class="lead-table-body">
+                            <tr>
+                                <td>Moi-même</td>
+                                <td><input type="number" id="prixAchat" value="35"></td>
+                                <td><input type="number" id="costPerLead" value="12"></td>
+                                <td><input type="number" id="confirmationRate" value="50"></td>
+                                <td id="costPerConfirmed"></td>
+                                <td><input type="number" id="deliveryRate" value="60"></td>
+                                <td id="costPerDelivered"></td>
+                                <td><input type="number" id="extra" value="11.6"></td>
+                                <td><input type="number" id="shipping" value="40"></td>
+                                <td><input type="number" id="margin" value="50"></td>
+                                <td id="prixVente"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button onclick="calculerPrixVente()" class="add-button">Calculer</button>
+                </div>
+        </div>
+    </div>
+</body>
+</html>

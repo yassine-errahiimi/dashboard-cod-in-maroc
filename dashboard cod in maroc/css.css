@@ -1,0 +1,218 @@
+.product-card {
+    border: 1px solid #00000024; /* Add a border with a light gray color */
+    border-radius: 4px; /* Optional: rounded corners */
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0px 20px 100px 20px rgba(0, 0, 0, 0.136);
+    max-width: auto; /* Make sure the image is responsive */
+    height: auto;
+    border-radius: 6px; /* Optional: rounded corners for the image */
+    
+    
+}
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+        }
+        .container {
+            max-width: 1050px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .sidebar {
+            width: 250px;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            min-height: 100%;
+            position: fixed;
+            
+        } 
+        .product-card img {
+        width: 100%;  /* Make image responsive to card width */
+        height: 150px; /* Set fixed height */
+        object-fit: cover; /* Ensure the image fits well */
+        border-radius: 5px;}
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            min-height: 100%;
+            
+           
+        }
+        .sidebar ul li {
+            padding: 10px;
+            margin: 10px 0;
+            background: #34495e;
+            cursor: pointer;
+            text-align: start;
+            border-radius: 15px;
+        }
+        .sidebar ul li i {
+            margin-right:8px;
+        }
+        .sidebar ul li:hover {
+            background: #1abc9c;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            margin-left: 300px;
+        }
+        .section {
+            display: none;
+    
+        }
+        .active {
+            display: block;
+        }
+        .home-stats {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        .home-card {
+            width: 22%;
+            padding: 20px;
+            color: rgb(255, 255, 255);
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0px 0px 110px 1px rgba(55, 54, 54, 0.305);
+            
+        }
+        .home-card i {
+            font-size: 36px;
+            margin-bottom: 19px;
+            
+        }
+        .revenue { background-color: #1abc9c; }
+        .leads { background-color: #5535e6; }
+        .pending { background-color: #f39c12; }
+        .no-reply { background-color: #f36412; }
+        .canceled { background-color: #e74c3c; }
+        .confirmed { background-color: #27ae60; }
+        .shipped { background-color: #3498db; }
+        .in-transit { background-color: #9b59b6; }
+        .delivered { background-color: #16a085; }
+        .returned { background-color: #9e7b77; }
+
+        .home-card h3 {
+            margin: 0;
+            font-size: 24px;
+        
+        }
+        .home-card p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .lead-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            
+        }
+        .lead-table th, .lead-table td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .lead-table th {
+            background-color: #2c3e50;
+            color: white;
+            padding: 12px;
+        }
+        .lead-table td {
+            padding: 12px;
+            background-color: #f9f9f9;
+        }
+
+        /* Confirmation Form Styling */
+        .confirmation-form {
+            max-width: 600px;
+            margin: 20 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .confirmation-form .form-group {
+            margin-bottom: 20px;
+        }
+        .confirmation-form label {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .confirmation-form input,
+        .confirmation-form select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+        .confirmation-form input:focus,
+        .confirmation-form select:focus {
+            outline: none;
+            border-color: #1abc9c;
+        }
+        .confirmation-form button.next-button {
+            width: 100%;
+            padding: 14px;
+            background-color: #1abc9c;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .confirmation-form button.next-button:hover {
+            background-color: #16a085;
+        }
+        .add-button{
+            width: 100%;
+            padding: 10px;
+            background-color: #1abc9c;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+           
+        }
+        .add-button:hover{
+            background-color: #2c3e50;
+            
+        }
+        
+        span{
+            padding-left: 15px;
+        }
+        input {
+            width: 70%;
+            padding: 2px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;}
+        
